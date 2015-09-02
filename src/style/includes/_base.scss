@@ -1,0 +1,85 @@
+////////////////////////
+// Global variables and imports for your project.
+////////////////////////
+
+////////////////////////
+// Variables:
+////////////////////////
+
+// Colors:
+// $primary-color: #000; // You can organize hierarchically...
+// $secondary-color: #ddd;
+// $tertiary-color: #fff;
+// $off-white: #fcf9f9; // Or with memorable names...
+// $light-blue: #F5FDFD;
+// $green: #8CC84B;
+
+/***********************************
+	1. Describe color with name
+************************************/
+// $oranges: #F26539;
+// $oranges-1: #f7941d;
+// $oranges-2: #f26522;
+// $oranges-3: #f17837;
+// $oranges-4: #f38238;
+// $oranges-5: #ffaa2d;
+// $oranges-6: #fa990b;
+// $oranges-7: #cf6d0a;
+// $oranges-8: #efaa07;
+// $oranges-9: #db5c04;
+// $blue: #227cb6;
+// $blue-1: #055e9d;
+// $logo-blue: #42515a;
+// $green: #469247;
+// $oranges-gradien: ($oranges-1, $oranges-2);
+// $btn-gradien: ($oranges-3, $oranges-4);
+// $btn-border-gradien: ($oranges-8, $oranges-9);
+// $btn-cta-gradien: ($oranges-5, $oranges-6, $oranges-7);
+
+
+/***********************************
+	2. Functions of color variables
+/**********************************/
+// $color-primary: $oranges;
+// $color-secondary: $blue;
+
+// // Fonts:
+// $myriad: "myriad pro",sans-serif;
+// $droid: "Droid Serif", serif;
+// $open-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $titilliumweb-black:  titilliumweb-black, sans-serif;
+// $titilliumweb-bold: titilliumweb-bold, sans-serif;
+// $titilliumweb-bolditalic: titilliumweb-bolditalic, sans-serif;
+// $titilliumweb-extralight: titilliumweb-extralight, sans-serif;
+// $titilliumweb-extralightitalic: titilliumweb-extralightitalic, sans-serif;
+// $titilliumweb-italic: titilliumweb-italic, sans-serif;
+// $titilliumweb-light:  titilliumweb-light, sans-serif;
+// $titilliumweb-lightitalic:  titilliumweb-lightitalic, sans-serif;
+// $titilliumweb-regular:  titilliumweb-regular, sans-serif;
+// $titilliumweb-semibold: titilliumweb-semibold, sans-serif;
+// $titilliumweb-semibolditalic: titilliumweb-semibolditalic, sans-serif;
+
+// $base-font-size: 16px;
+// $base-font-family: $titilliumweb-regular;
+// $body-font: Verdana, Tahoma, sans-serif;
+// $heading-font: $titilliumweb-semibold;
+
+// Breakpoints:
+// Note: If you're using the Breakpoint mixin,
+// make sure to use the correct syntax: http://breakpoint-sass.com/
+$break-small: max-width 480px;
+$break-medium: max-width 768px;
+$break-large: max-width 980px;
+
+//Breakpoint responsive (using max-width)
+$mobile-portrait: 480px; //for medium of grid foundation
+$mobile: 567px;
+$mobile-landscape: 600px;
+$tablet: 768px;
+
+// define $container = 1200px .
+$container : 990px;
+$page-wrapper : 1200px;
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 72px;
