@@ -1,8 +1,12 @@
-////////////////////////
-// Main file that pulls in everything from your project (except files in
-// specifics) and produces an aggregated CSS file.
-////////////////////////
+/**
+ * Main file that pulls in everything from your project.
+ * except specifics in components.
+ */
 
 // Base:
 @import "includes/base";
 @import "includes/extendables";
+
+// Components:
+@import "components/header";
+@import "components/footer";

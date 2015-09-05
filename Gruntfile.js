@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     // concat: {
     //   themeJs: {
     //     files: {
-    //       'dist/js/fiksu.js': themeJs
+    //       'dist/js/main.js': themeJs
     //     }
     //   }
     // },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     //   },
     //   themeJs: {
     //     files: {
-    //       'dist/js/fiksu.min.js': 'dist/js/fiksu.js'
+    //       'dist/js/main.min.js': 'dist/js/main.js'
     //     }
     //   }
     // },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
           outputStyle: 'nested'
         },
         files: {
-          'css/main.css': 'src/style/main.scss',
+          'dist/css/main.css': 'src/style/main.scss',
         }
       },
       dist: {
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
           compressed: true
         },
         files: {
-          'css/main.css': 'scss/main.scss'
+          'dist/css/main.css': 'src/style/main.scss'
         }
       }
     }
