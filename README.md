@@ -1,5 +1,5 @@
 # kalasass
-Quick Grunt SaSS Setup for Kalatheme Subthemes
+Quick Node SaSS Setup w/ Grunt for Kalatheme Subthemes
 
 ## Setup:
 Add this to your .gitignore in the subtheme:
