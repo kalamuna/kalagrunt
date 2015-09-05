@@ -1,30 +1,30 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
-  // var themeJs = [
-  //       'js/whateverfileweneed.js',
-  //     ];
+  var themeJs = [
+    'src/js/theme.js',
+  ];
 
   var config = {
     // Load data from package.json
     pkg: grunt.file.readJSON('package.json'),
 
-    // concat: {
-    //   themeJs: {
-    //     files: {
-    //       'dist/js/main.js': themeJs
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   options: {
-    //     sourceMap: false
-    //   },
-    //   themeJs: {
-    //     files: {
-    //       'dist/js/main.min.js': 'dist/js/main.js'
-    //     }
-    //   }
-    // },
+    concat: {
+      themeJs: {
+        files: {
+          'dist/js/main.js': themeJs
+        }
+      }
+    },
+    uglify: {
+      options: {
+        sourceMap: false
+      },
+      themeJs: {
+        files: {
+          'dist/js/main.min.js': 'dist/js/main.js'
+        }
+      }
+    },
     watch: {
       sass: {
         files: 'src/style/**/*.scss',
@@ -32,13 +32,11 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      themeJs: {
+        files: themeJs,
+        tasks: ['concat:themeJs']
       }
-      // remove the } above if uncomment below.
-      // },
-      // themeJs: {
-      //   files: themeJs,
-      //   tasks: ['concat:themeJs']
-      // }
     },
     sass: {
       dev: {
@@ -68,7 +66,6 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   grunt.registerTask("prodbuild", ['concat', 'uglify', 'sass:dist']);
-  // grunt.registerTask("devbuild", ['concat', 'sass:dev']);
-  grunt.registerTask("devbuild", ['sass:dev']);
+  grunt.registerTask("devbuild", ['concat', 'uglify', 'sass:dev']);
   grunt.registerTask("default", ['devbuild']);
 };
