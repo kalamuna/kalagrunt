@@ -13,4 +13,3 @@ report
 
 Run ```npm install``` in the subtheme folder and then ```grunt``` to complie the scss.
 
-Uncomment lines for JS and remove the grunt.registerTask("devbuild", ['sass:dev']); for the line above it.
