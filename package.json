@@ -4,8 +4,9 @@
   "description": "Grunt compilation of sass and js.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sassboilerplate": "npm install https://github.com/kalamuna/sass-boilerplate && mv node_modules/sass-boilerplate/scss src/scss",
-    "postinstall": "npm run-script sassboilerplate"
+    "sassboilerplate": "npm install https://github.com/kalamuna/sass-boilerplate && mkdir scss && mv node_modules/sass-boilerplate/scss/* scss",
+    "postinstall": "npm run-script sassboilerplate && mkdir scripts && touch scripts/theme.js"
+
   },
   "authors": [
     "John Ouellet <john@kalamuna.com>",
