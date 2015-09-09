@@ -15,6 +15,6 @@ stylesheets[all][] = dist/css/main.css
 scripts[] = dist/js/main.min.js
 ```
 
-If you are using this on a project, i would also nuke the .git folder as well.
+If you are using this on a project, consider nuking the .git folder as well.
 
 (we should rename this, kalaproof like http://www.thekitchn.com/baking-lessons-how-to-proof-ye-94555)
