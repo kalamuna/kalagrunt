@@ -1,4 +1,5 @@
-# kalasass
+# kalagrunt (we should rename this, kalaproof like http://www.thekitchn.com/baking-lessons-how-to-proof-ye-94555)
+
 Quick Node SaSS Setup w/ Grunt for Kalatheme Subthemes
 
 ## Setup:
