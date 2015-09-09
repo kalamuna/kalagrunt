@@ -47,7 +47,7 @@ module.exports = function(grunt) {
           outputStyle: 'nested'
         },
         files: {
-          'dist/css/main.css': 'src/style/main.scss',
+          'dist/css/main.css': 'scss/main.scss',
         }
       },
       dist: {
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
           compressed: true
         },
         files: {
-          'dist/css/main.css': 'src/style/main.scss'
+          'dist/css/main.css': '/scss/main.scss'
         }
       }
     }
@@ -67,5 +67,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask("prodbuild", ['concat', 'uglify', 'sass:dist']);
   grunt.registerTask("devbuild", ['concat', 'uglify', 'sass:dev']);
-  grunt.registerTask("default", ['devbuild']);
+  grunt.registerTask("default", ['devbuild','watch']);
 };
