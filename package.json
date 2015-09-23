@@ -4,9 +4,8 @@
   "description": "Grunt compilation of sass and js.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sassboilerplate": "npm install https://github.com/kalamuna/sass-boilerplate && mkdir scss && mv node_modules/sass-boilerplate/scss/* scss",
-    "postinstall": "npm run-script sassboilerplate && mkdir scripts && touch scripts/theme.js"
-
+    "installSassBoilerplate": "npm i -g khaos && khaos install kalamuna/sass-boilerplate && khaos create sass-boilerplate scss",
+    "postinstall": "bower install"
   },
   "authors": [
     "John Ouellet <john@kalamuna.com>",
@@ -22,6 +21,7 @@
     "grunt-sass": "latest"
   },
   "dependencies": {
+    "bower": "^1.5.2",
     "load-grunt-tasks": "latest"
   }
 }
