@@ -3,12 +3,18 @@
 Quick Node SaSS Setup w/ Grunt for Kalatheme Subthemes
 
 ## Setup
-In your subtheme folder…
-```npm i -g khaos``` installs [kaos](https://github.com/segmentio/khaos)
-```npm install```
-```khaos install kalamuna/sass-boilerplate``` [kalamuna/sass-boilerplate](https://github.com/kalamuna/sass-boilerplate)
-(only if you've never installed it before, otherwise ```khaos update kalamuna/sass-boilerplate``` )
-```kaos create sass-boilerplate scss``` to install in a folder called 'scss'
+install [khaos](https://github.com/segmentio/khaos) with: ```npm i -g khaos```
+
+### In your subtheme folder:
+1 - ```npm install```
+
+#### If you have never installed before
+2a - Install [kalamuna/sass-boilerplate](https://github.com/kalamuna/sass-boilerplate) with: ```khaos install kalamuna/sass-boilerplate```
+#### If you have installed before, just update sass-boilerplate with:
+2b - ```khaos update kalamuna/sass-boilerplate```
+
+3 - ```kaos create sass-boilerplate scss``` to install in a folder called 'scss'
+
 
 ## Compiling Sass
 ```grunt devbuild```
