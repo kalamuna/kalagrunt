@@ -4,7 +4,6 @@
   "description": "Grunt compilation of sass and js.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installSassBoilerplate": "npm i -g khaos && khaos install kalamuna/sass-boilerplate && khaos create sass-boilerplate scss",
     "postinstall": "bower install"
   },
   "authors": [
