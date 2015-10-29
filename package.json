@@ -12,7 +12,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "grunt": "latest",
+    "grunt": "^0.4.5",
+    "grunt-build-control": "^0.6.1",
     "grunt-contrib-concat": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
@@ -22,5 +23,10 @@
   "dependencies": {
     "bower": "^1.5.2",
     "load-grunt-tasks": "latest"
+  },
+  "config": {
+    "repo": "kalamuna/kalagrunt",
+    "deploy": "Enter deployment repository here",
+    "branch": "master"
   }
 }

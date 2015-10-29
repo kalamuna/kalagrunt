@@ -35,3 +35,8 @@ scripts[] = dist/js/main.min.js
 If you are using this on a project, consider nuking the .git folder as well.
 
 (we should rename this, kalaproof like http://www.thekitchn.com/baking-lessons-how-to-proof-ye-94555)
+
+### Deployment
+
+See the [KalaStatic Deployment Wiki](https://github.com/kalamuna/kalastatic/wiki/Depolyment) for information on
+setting up both manual and automated deployments.

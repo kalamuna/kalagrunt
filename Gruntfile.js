@@ -58,13 +58,52 @@ module.exports = function(grunt) {
           'dist/css/main.css': 'scss/main.scss'
         }
       }
+    },
+
+    // The Build Control plugin:
+    // https://www.npmjs.com/package/grunt-build-control
+    buildcontrol: {
+      options: {
+        dir: 'dist', // Which directory to deploy
+        commit: true, // Only commit if code has changed
+        push: true, // Push to remote
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      // GitHub Pages target: https://pages.github.com
+      github: {
+        options: {
+          remote: 'git@github.com:<%= pkg.config.repo %>.git',
+          branch: 'gh-pages'
+        }
+      },
+      // The default deployment target, set in package.json.
+      deploy: {
+        options: {
+          remote: '<%= pkg.config.deploy %>',
+          branch: '<%= pkg.config.branch %>'
+        }
+      }
     }
 
   };
 
+
+  // Deploy all branches to the same branch name. Pull Requests are already handled by this.
+  if (process.env.TRAVIS_PULL_REQUEST == 'false' && process.env.TRAVIS_BRANCH) {
+    // Branch switching is commented out until this is deployed.
+    config.buildcontrol.deploy.options.branch = process.env.TRAVIS_BRANCH;
+  }
+
+  // Extract any keys from the environmental variables.
+  if (process.env.GH_TOKEN) {
+    // Update the remote git repository to use the GitHub token.
+    config.buildcontrol.github.options.remote = "https://" + process.env.GH_TOKEN + "@github.com/<%= pkg.config.repo %>.git";
+  }
+
   // Initialize the configuration.
   grunt.initConfig(config);
 
+  grunt.registerTask("deploy", ['buildcontrol']);
   grunt.registerTask("prodbuild", ['concat', 'uglify', 'sass:dist']);
   grunt.registerTask("devbuild", ['concat', 'uglify', 'sass:dev']);
   grunt.registerTask("default", ['devbuild','watch']);
